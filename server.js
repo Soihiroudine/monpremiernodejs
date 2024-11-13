@@ -1,11 +1,10 @@
-
-
 // Importeer le protocole http
 const http = require("http");
 
 // Déclaration du serveur en utilisant http
 const server = http.createServer((req, res) => {
-    res.end("Bonjour le serveur est lancé !");
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end("Bonjour le serveur est lancer !");
 });
 
 // le serveur est disponible au port 3000
