@@ -7,5 +7,8 @@
   },
   "author": "soihiroudine moussa",
   "license": "ISC",
-  "description": "This project will be our starting point for our learning of nodeJs"
+  "description": "This project will be our starting point for our learning of nodeJs",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
 }

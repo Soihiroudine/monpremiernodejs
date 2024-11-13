@@ -1,16 +1,27 @@
 // Importeer le protocole http
-const http = require("http");
+import { createServer } from "http";
+import { app } from "./app.js";
+
+const PORT = 3000;
+
+app.set("port", PORT);
 
 // Déclaration du serveur en utilisant http
-const server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end("Bonjour le serveur est lancer !");
+const server = createServer(app);
+
+server.listen(PORT, () =>{
+    console.log("Le serveur est lancé au port : " + PORT);
 });
 
-// le serveur est disponible au port 3000
-server.listen(3000, () => {
-    console.log('Listening on localhost:3000');
-});
+// const server1 = createServer((req, res) => {
+//     res.writeHead(200, {'Content-Type': 'text/html'});
+//     res.end("Bonjour le serveur est lancer !");
+// });
+
+// // le serveur est disponible au port 3000
+// server.listen(3000, () => {
+//     console.log('Listening on localhost:3000');
+// });
 
 
 /* 
