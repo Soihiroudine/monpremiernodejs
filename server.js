@@ -28,7 +28,7 @@ const minute = (date.getMinutes() < 10) ? "0"+date.getMinutes(): date.getMinutes
 server.listen(PORT, () =>{
     // Afficher l'heure
     
-
+    console.log(date.toLocaleDateString()," ", date.toLocaleTimeString());
     console.log(`Il est ${heure}h${minute}`);
     console.log("Le serveur est lancé au port : " + PORT);
 });
