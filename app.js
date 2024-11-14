@@ -1,13 +1,21 @@
-import express from "express";
+// import express from "express";
 
-// On créer l'application expressJs
+// On import le framework express
+const express = require("express");
+
+// On créer l'application expressJs avec : app
 const app = express();
 
-// app.use((req, res) => {
-//     res.writeHead(200, {"content-Type": "text/html"});
-//     res.end("Le serveur est lancer!");
-// });
+app.use((req, res) => {
+    // res.writeHead(200, {"content-Type": "text/html"});
+    res.json({message: "Message envoyer "});
+    // res.write("Bonjour !");
+});
 
+// On exporter l'application
+module.exports = app;
+
+/* 
 app.get("/", (req, res) => {
     res.end("<h1>Je viens de lancer mon serveur !</h1>");
 });
@@ -27,8 +35,4 @@ app.get("/bangalo", (req, res) => {
 app.listen(3001, () => {
     console.log("Serveur au port 3001");
 });
-// On va exporter l'application pour les autres fichiers 
-// module.exports = app;
-// export{
-//     app
-// };
+*/

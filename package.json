@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "This project will be our starting point for our learning of nodeJs",
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "npm": "^10.9.0"
   }
 }
