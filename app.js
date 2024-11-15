@@ -12,32 +12,52 @@ const app = express();
 //     // res.write("Bonjour !");
 // });
 
-// On exporter l'application
-module.exports = app;
-
-
+// route
 app.get("/", (req, res) => {
-    res.end("<h1>Je viens de lancer mon serveur !</h1>");
+    res.end("Je viens de lancer mon serveur avec GET !");
 });
 
+// route acceuil
 app.get("/acceuil", (req, res) => {
-    res.end("<h1>Je viens de mettre un acceuil !</h1>");
+    res.end("Je viens de mettre un acceuil !");
 });
 
+// route apropos
 app.get("/apropos", (req, res) => {
-    res.end("<h1>Vous etes dans la apropos !</h1>");
+    res.end("Vous etes dans la apropos !");
 });
 
+// route services
 app.get("/services", (req, res) => {
-    res.end("<h1>Vous etes dans le services !</h1>");
+    res.end("Vous etes dans le services !");
 });
 
+// route contact
 app.get("/contact", (req, res) => {
-    res.end("<h1>Vous etes dans le contact !</h1>");
+    res.end("Vous etes dans le contact !");
 });
+
+// POST
+app.post("/moncompte", (req, res) => {
+    res.end("Lancé dans le POST : /moncompte");
+});
+
+// PUT
+app.put("/mettre", (req, res) => {
+    res.end('une requete envoyer par la methode PUT : /mettre');
+});
+
+// DELETE
+app.delete('/supprimer', (req, res) => {
+    res.end('une requete envoyer par la methode DELETE : /supprimer');
+});
+
 
 /*
 app.listen(3001, () => {
     console.log("Serveur au port 3001");
 });
 */
+
+// On exporter l'application
+module.exports = app;
